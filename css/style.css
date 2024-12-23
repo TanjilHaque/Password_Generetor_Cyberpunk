@@ -38,21 +38,142 @@ img {
     width: 1120px;
     margin: auto;
 }
+
 /* ===================================Common CSS====================================== */
 
 /* ===================================root CSS====================================== */
-:root{
+:root {
     --cyber-font: "Tomorrow", serif;
+    --barlow-font: "Barlow", serif;
 
     --yellow: #F8EF00;
     --aqua: #00F0FF;
     --aquaOP: rgba(0, 238, 255, 0.1);
     --light-text: #FAFAFA;
     --grey-text: #BBBBBB;
+    --red-border: #FF003C;
 }
+
 /* ===================================root CSS====================================== */
 
-body{
+body {
     font-family: var(--cyber-font);
+    background-color: black;
+    color: var(--light-text);
 }
 
+.container {
+    padding-top: 100px;
+    padding-bottom: 110px;
+}
+
+.heading {
+    font-size: 40px;
+    line-height: 40px;
+    font-weight: 700;
+    color: var(--yellow);
+    letter-spacing: 8px;
+    margin-bottom: 64px;
+}
+
+.passwordBox {
+    padding: 20px;
+    width: 588px;
+    height: 64px;
+    background-color: var(--aquaOP);
+    border: 2px solid var(--aqua);
+    outline: none;
+    margin-bottom: 20px;
+}
+
+.copyPass {
+    display: block;
+    width: 350px;
+    height: 64px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 40px;
+    font-family: var(--cyber-font);
+    font-size: 16px;
+    font-weight: 600;
+    color: black;
+    line-height: 24px;
+    letter-spacing: 3.2px;
+    text-align: start;
+    background-color: var(--yellow);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 6% 100%, 0 65%);
+    cursor: pointer;
+    transition: 0.5s all linear;
+    margin-bottom: 64px;
+    border: none;
+    position: relative;
+}
+
+.copyBtnContainer{
+    position: relative;
+    width: 350px;
+}
+
+.copyBtnContainer::after{
+    position: absolute;
+    content: "";
+    bottom: 0;
+    right: 46px;
+    height: 8px;
+    width: 2px;
+    background: var(--red-border);
+}
+
+.r25btn{
+    position: absolute;
+    width: 38px;
+    height: 8px;
+    bottom: 0;
+    right: 10px;
+    background-color: black;
+    color: var(--yellow);
+    font-size: 8px;
+    letter-spacing: 1.6px;
+    text-align: center;
+    font-family: var(--barlow-font);
+}
+
+.copyPass::after{
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0px;
+    height: 64px;
+    width: 4px;
+    background: var(--red-border);
+}
+
+.copyPass:hover {
+    background-color: var(--red-border);
+}
+
+.copyPass i {
+    display: inline-block;
+    font-size: 18px;
+    margin-left: 60px;
+}
+
+.inputSlider {
+    -webkit-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    width: 588px;
+    height: 3px;
+    border-radius: none;
+    background: var(--aqua);
+    margin-bottom: 64px;
+}
+
+.inputSlider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 21px;
+    height: 21px;
+    border-radius: none;
+    background-color: var(--yellow);
+}
