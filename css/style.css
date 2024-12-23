@@ -1,0 +1,58 @@
+/* ===================================Common CSS====================================== */
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+section {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+li,
+ol {
+    list-style: none;
+}
+
+img {
+    vertical-align: center;
+}
+
+.container {
+    width: 1120px;
+    margin: auto;
+}
+/* ===================================Common CSS====================================== */
+
+/* ===================================root CSS====================================== */
+:root{
+    --cyber-font: "Tomorrow", serif;
+
+    --yellow: #F8EF00;
+    --aqua: #00F0FF;
+    --aquaOP: rgba(0, 238, 255, 0.1);
+    --light-text: #FAFAFA;
+    --grey-text: #BBBBBB;
+}
+/* ===================================root CSS====================================== */
+
+body{
+    font-family: var(--cyber-font);
+}
+

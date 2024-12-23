@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <!-- ================================Google Fonts================================= -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Tomorrow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <!-- ================================Google Fonts================================= -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="generatorSection">
+            <h1 class="heading">
+                PASSWORD GENERATOR
+            </h1>
+            <input type="text" disabled class="passwordBox">
+            <button class="copyPass">COPY PASSWORD</button>
+            <input type="range" value="8" min="1" max="16" class="inputSlider">
+            <div class="row">
+                <label for="upperCase">Uppercase letters</label>
+                <input type="checkbox" class="checkboxPass" id="upperCase">
+                <label for="lowerCase">Lowercase letters</label>
+                <input type="checkbox" class="checkboxPass" id="lowerCase">
+            </div>
+            <div class="row">
+                <label for="numbers">Numbers</label>
+                <input type="checkbox" class="checkboxPass" id="numbers">
+                <label for="symbols">Symbols</label>
+                <input type="checkbox" class="checkboxPass" id="symbols">
+            </div>
+
+            <div class="audioSection">
+                <h4 class="enableAudio">
+                    ENABLE AUDIO
+                </h4>
+            </div>
+        </div>
+
+
+
+        <div class="historySection">
+            <h3>PASSWORD HISTORY</h3>
+            <div class="historyContainer">
+                <div class="historyContainerElements">
+                    <div class="elements_info">
+                        <h4>431jnrqkwej45,qkljK</h4>
+                        <p>Mon Dec 23 2024 15:11:54 GMT+0600 (Bangladesh Standard Time)</p>
+                    </div>
+                    <button>copy</button>
+                </div>
+                <div class="historyContainerElements">
+                    <div class="elements_info">
+                        <h4>431jnrqkwej45,qkljK</h4>
+                        <p>Mon Dec 23 2024 15:11:54 GMT+0600 (Bangladesh Standard Time)</p>
+                    </div>
+                    <button>copy</button>
+                </div>
+                <div class="historyContainerElements">
+                    <div class="elements_info">
+                        <h4>431jnrqkwej45,qkljK</h4>
+                        <p>Mon Dec 23 2024 15:11:54 GMT+0600 (Bangladesh Standard Time)</p>
+                    </div>
+                    <button>copy</button>
+                </div>
+                <div class="historyContainerElements">
+                    <div class="elements_info">
+                        <h4>431jnrqkwej45,qkljK</h4>
+                        <p>Mon Dec 23 2024 15:11:54 GMT+0600 (Bangladesh Standard Time)</p>
+                    </div>
+                    <button>copy</button>
+                </div>
+                <div class="historyContainerElements">
+                    <div class="elements_info">
+                        <h4>431jnrqkwej45,qkljK</h4>
+                        <p>Mon Dec 23 2024 15:11:54 GMT+0600 (Bangladesh Standard Time)</p>
+                    </div>
+                    <button>copy</button>
+                </div>
+            </div>
+            <p class="clearHistory">Clear history</p>
+        </div>
+    </div>
+
+
+
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
