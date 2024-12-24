@@ -61,67 +61,84 @@
             </div>
             <input type="range" value="8" min="1" max="30" class="inputSlider">
             <div class="row">
-                <label for="upperCase">Uppercase letters</label>
-                <input type="checkbox" class="checkboxPass" id="upperCase">
-                <label for="lowerCase">Lowercase letters</label>
-                <input type="checkbox" class="checkboxPass" id="lowerCase">
+                <div class="row__uppercase">
+                    <label for="upperCase">
+                        <input type="checkbox" class="checkboxPass" id="upperCase">
+                        <span></span>Uppercase letters
+                    </label>
+                </div>
+                <div class="row__lowercase">
+                    <label for="lowerCase">
+                        <input type="checkbox" class="checkboxPass" id="lowerCase">
+                        <span></span>Lowercase letters
+                    </label>
+                </div>
             </div>
             <div class="row">
-                <label for="numbers">Numbers</label>
-                <input type="checkbox" class="checkboxPass" id="numbers">
-                <label for="symbols">Symbols</label>
-                <input type="checkbox" class="checkboxPass" id="symbols">
+                <div class="row__numbers">
+                    <label for="numbers">
+                        <input type="checkbox" class="checkboxPass" id="numbers">
+                        <span></span>Numbers
+                    </label>
+                </div>
+                <div class="row__symbols">
+                    <label for="symbols">
+                        <input type="checkbox" class="checkboxPass" id="symbols">
+                        <span></span>Symbols
+                    </label>
+                </div>
             </div>
 
             <div class="audioSection">
                 <h4 class="enableAudio">
+                    <i class="fa-solid fa-music-slash"></i>
                     ENABLE AUDIO
                 </h4>
             </div>
         </div>
 
-
-
         <div class="historySection">
-            <h3>PASSWORD HISTORY</h3>
+            <h3 class="historyHeading">PASSWORD HISTORY</h3>
             <div class="historyContainer">
                 <div class="historyContainerElements">
                     <div class="elements_info">
                         <h4>431jnrqkwej45,qkljK</h4>
-                        <p>Mon Dec 23 2024 15:11:54 GMT+0600 (Bangladesh Standard Time)</p>
+                        <p>Mon Dec 23 2024 15:11:54 GMT+0600</p>
                     </div>
-                    <button>copy</button>
+                    <button><i class="fa-solid fa-clone"></i></button>
                 </div>
                 <div class="historyContainerElements">
                     <div class="elements_info">
                         <h4>431jnrqkwej45,qkljK</h4>
-                        <p>Mon Dec 23 2024 15:11:54 GMT+0600 (Bangladesh Standard Time)</p>
+                        <p>Mon Dec 23 2024 15:11:54 GMT+0600</p>
                     </div>
-                    <button>copy</button>
+                    <button><i class="fa-solid fa-clone"></i></button>
                 </div>
                 <div class="historyContainerElements">
                     <div class="elements_info">
                         <h4>431jnrqkwej45,qkljK</h4>
-                        <p>Mon Dec 23 2024 15:11:54 GMT+0600 (Bangladesh Standard Time)</p>
+                        <p>Mon Dec 23 2024 15:11:54 GMT+0600</p>
                     </div>
-                    <button>copy</button>
+                    <button><i class="fa-solid fa-clone"></i></button>
                 </div>
                 <div class="historyContainerElements">
                     <div class="elements_info">
                         <h4>431jnrqkwej45,qkljK</h4>
-                        <p>Mon Dec 23 2024 15:11:54 GMT+0600 (Bangladesh Standard Time)</p>
+                        <p>Mon Dec 23 2024 15:11:54 GMT+0600</p>
                     </div>
-                    <button>copy</button>
+                    <button><i class="fa-solid fa-clone"></i></button>
                 </div>
                 <div class="historyContainerElements">
                     <div class="elements_info">
                         <h4>431jnrqkwej45,qkljK</h4>
-                        <p>Mon Dec 23 2024 15:11:54 GMT+0600 (Bangladesh Standard Time)</p>
+                        <p>Mon Dec 23 2024 15:11:54 GMT+0600</p>
                     </div>
-                    <button>copy</button>
+                    <button><i class="fa-solid fa-clone"></i></button>
                 </div>
             </div>
-            <p class="clearHistory">Clear history</p>
+            <div class="clearHistory">
+                <button class="clearHistory__text">Clear history</button>
+            </div>
         </div>
     </div>
 
