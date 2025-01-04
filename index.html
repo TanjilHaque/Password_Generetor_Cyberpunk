@@ -54,12 +54,21 @@
                 PASSWORD <br>
                 GENERATOR
             </h1>
-            <input type="text" class="passwordBox">
+            <div class="boxBtnContainer">
+                <input type="text" class="passwordBox">
+                <button id="reloadBtn">
+                    <!-- <i class="fa-solid fa-rotate-reverse"></i> -->
+                     GENERATE
+                </button>
+            </div>
             <div class="copyBtnContainer">
                 <button class="copyPass">COPY PASSWORD_ <i class="fa-sharp fa-solid fa-arrow-right"></i></button>
                 <span class="r25btn">R25</span>
             </div>
-            <input type="range" value="8" min="1" max="30" class="inputSlider">
+            <div class="sliderContainer">
+                <input type="range" value="8" min="4" max="20" class="inputSlider">
+                <div class="sliderValue">8</div>
+            </div>
             <div class="row">
                 <div class="row__uppercase">
                     <label for="upperCase">
