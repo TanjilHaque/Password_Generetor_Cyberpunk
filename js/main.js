@@ -7,11 +7,45 @@ const lowerCase = document.querySelector('#lowerCase');
 const numbers = document.querySelector('#numbers');
 const symbols = document.querySelector('#symbols');
 const enableAudio = false;
+const enableAudioListener = document.querySelector('.audioSection');
 const clearHistory__text = document.querySelector('.clearHistory__text');
 const sliderValue = document.querySelector('.sliderValue');
 const sliderContainer = document.querySelector('.sliderContainer');
 const sliderWidth = sliderContainer.offsetWidth;
 const historyContainer = document.querySelector('.historyContainer');
+const passwordCopyBtn = document.querySelector('.passwordCopyBtn');
+
+const backGroundMusic = new Audio('backgroundMusic.mp3');
+const clearHistory = new Audio('clearHistory.mp3');
+
+
+clearHistory__text.addEventListener('click', ()=>{
+    clearHistory.play();
+})
+
+
+let enableCount = 2;
+enableAudioListener.addEventListener('click', function(){
+
+    if(enableCount%2===0){
+        backGroundMusic.play();
+        backGroundMusic.addEventListener('ended',()=>{
+            backGroundMusic.currentTime = 0;
+            backGroundMusic.play();
+        })
+        enableCount++;
+        document.querySelector('.enableAudio').innerHTML = `<i class="fa-solid fa-music audioIcon"></i>
+                                                                DISABLE AUDIO`;
+    }
+    else{
+        backGroundMusic.pause();
+        enableCount++;
+        document.querySelector('.enableAudio').innerHTML = `<i class="fa-solid fa-music-slash audioIcon"></i>
+                                                                ENABLE AUDIO`;
+    }
+    
+
+})
 
 inputSlider.addEventListener('input', () => {
     let percentage = (inputSlider.value - inputSlider.min) / (inputSlider.max - inputSlider.min);
@@ -104,29 +138,20 @@ function savePassword() {
         historyContainerElements.appendChild(passwordCopyBtn);
         elements_info.appendChild(elementsInfo__password);
         elements_info.appendChild(elementsInfo__date);
-        historyContainer.appendChild(historyContainerElements);
+
+        // Prepend the new element to historyContainer
+        historyContainer.insertBefore(historyContainerElements, historyContainer.firstChild);
+
         elementsInfo__password.innerText = passwordBox.value;
         elementsInfo__date.innerText = currentDate.toString();
-        // historyContainer.innerHTML += `  <div class="historyContainerElements">
-        //                                     <div class="elements_info">
-        //                                         <h4>${passwordBox.value}</h4>
-        //                                         <p>${currentDate.toString()}</p>
-        //                                     </div>
-        //                                     <button id = "historyCopyBtn${i}" onclick = "copyHistoryPassword()"><i class="fa-solid fa-clone"></i></button>
-        //                                 </div>`
 
         localStorage.setItem(`pass${i}`, passwordBox.value);
         localStorage.setItem(`date${i}`, currentDate.toString());
         localStorage.getItem(`pass${i}`);
         localStorage.getItem(`date${i}`);
-        console.log(localStorage);
-        console.log(localStorage.length);
-        console.log(localStorage[`pass1`]);
-
-
-
     }
 }
+
 
 function copyHistoryPassword(pass) {
     const textElement = document.getElementById(pass);

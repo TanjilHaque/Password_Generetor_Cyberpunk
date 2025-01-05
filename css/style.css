@@ -317,12 +317,21 @@ label{
     margin-bottom: 20px;
 }
 
-#historyCopyBtn{
-    transition: 0.2 all linear;
+.passwordCopyBtn{
+    font-size: 16px;
+    padding: 5px 10px;
+    border: 1px solid var(--yellow);
+    color: white;
+    background-color: transparent;
+    cursor: pointer;
+    transition: 0.2s all linear;
+    font-family: var(--barlow-font);
 }
 
-#historyCopyBtn:hover{
-    color: var(--yellow);
+.passwordCopyBtn:hover{
+    background-color: var(--red-border);
+    border: none;
+    color: black;
 }
 
 .elements_info h4{
@@ -366,14 +375,6 @@ label{
     color: var(--red-border);
 }
 
-
-.historyContainerElements button{
-    border: none;
-    background-color: transparent;
-    color: var(--light-text);
-    font-size: 24px;
-    cursor: pointer;
-}
 
 @media (max-width: 1024px){
     .container{
